@@ -1,0 +1,34 @@
+﻿<Window x:Class="LibraryIs2.AddUpdateForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LibraryIs2"
+        mc:Ignorable="d"
+        Title="AddUpdateForm" Height="450" Width="800">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock>Название книги:</TextBlock>
+                <TextBox  Text="{Binding Name}" Width="100"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock>Описание:</TextBlock>
+                <TextBox Text="{Binding Description}" Width="100"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock>Год публикации:</TextBlock>
+                <TextBox Text="{Binding YearPub}" Width="100"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock>Жанр:</TextBlock>
+                <ComboBox x:Name="sectionComboBox" DisplayMemberPath="Name" SelectedItem="{Binding PM05Section}"></ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock>Издательство:</TextBlock>
+                <ComboBox x:Name="publisherComboBox" DisplayMemberPath="Name" SelectedItem="{Binding PM05Publisher}"></ComboBox>
+            </StackPanel>
+            <Button Click="Button_Click">Сохранить</Button>
+        </StackPanel>
+    </Grid>
+</Window>
